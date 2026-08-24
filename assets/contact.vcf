@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Quoineaud;Maxime;;;
+FN:Maxime Quoineaud
+TITLE:Light Designer / Light Operator / A/V Network Admin
+ROLE:Spectacle vivant - lumiere et reseaux audiovisuels
+EMAIL;TYPE=INTERNET,PREF:maxime.quoineaud@gmail.com
+TEL;TYPE=CELL:+33600000000
+ADR;TYPE=WORK:;;;Votre ville;;;France
+URL:https://example.com/
+NOTE:Conception lumiere, regie et administration reseaux A/V (Art-Net, sACN, Dante, NDI).
+END:VCARD
