@@ -1,7 +1,7 @@
-# Carte de visite — Light Designer · Light Operator · A/V Network Admin
+# QN Design — Light Designer · Light Operator · A/V Network Admin
 
-Site « carte de visite » d'une seule page : les activités et les contacts, rien d'autre
-(pas de portfolio, pas de blog). Statique, sans dépendance ni étape de build — trois
+Landing page d'une seule page pour **QN Design** (Maxime Quoineaud) : hero en verre dépoli
+(glassmorphism) animé, activités, savoir-faire, domaines et contacts — pas de portfolio, pas de blog. Statique, sans dépendance ni étape de build — trois
 fichiers suffisent à le mettre en ligne.
 
 ## Aperçu local
@@ -17,8 +17,10 @@ python3 -m http.server 8000
 
 ```
 index.html               page unique (contenu + données SEO/JSON-LD)
-assets/css/style.css     styles (thème sombre, faisceaux lumineux, responsive, impression)
-assets/js/main.js        apparitions au scroll, copie de l'e-mail, année du footer
+assets/css/style.css     styles (thème sombre, glassmorphism, orbes et faisceaux animés, responsive, impression)
+assets/js/main.js        nav (verre au scroll, menu mobile, lien actif), parallaxe et inclinaison
+                         de la carte du hero, apparitions au scroll, bandeau des domaines,
+                         copie de l'e-mail, année du footer
 assets/img/favicon.svg   monogramme utilisé comme favicon
 assets/contact.vcf       carte de visite numérique téléchargeable (vCard 3.0)
 ```
@@ -29,10 +31,9 @@ Les emplacements à remplir sont balisés par un commentaire `TODO` dans `index.
 
 | Élément | Où |
 |---|---|
-| Nom et initiales du monogramme | `index.html` (`.logo-mark`, `.hero__name`, `<title>`, JSON-LD), `assets/img/favicon.svg`, `assets/contact.vcf` |
 | Téléphone | bloc contact + `assets/contact.vcf` |
 | Ville de rattachement | bloc contact + `assets/contact.vcf` |
-| LinkedIn / Instagram | `.social-links` (supprimer les lignes inutiles) |
+| LinkedIn / Instagram / Facebook | `.social-links` (supprimer les lignes inutiles) |
 | SIRET | pied de page |
 | URL définitive du site | balises `canonical`, `og:url`, JSON-LD, `assets/contact.vcf` |
 | Image de partage 1200×630 | `assets/img/og-image.png` + balise `og:image` |
@@ -61,7 +62,10 @@ faisceaux, halos, boutons et survols suivent automatiquement.
 - **Aucune dépendance externe** hors Google Fonts (Inter + Space Grotesk) : les icônes sont
   des SVG inline, donc pas de CDN d'icônes à charger ni à surveiller.
 - **Accessibilité** : lien d'évitement, contrastes élevés, styles de focus visibles,
-  libellés ARIA sur les liens sociaux, respect de `prefers-reduced-motion`.
+  libellés ARIA sur les liens sociaux, respect de `prefers-reduced-motion` (toutes les
+  animations — orbes, inclinaison, bandeau — sont alors coupées).
+- **Glassmorphism** : `backdrop-filter` avec repli opaque pour les navigateurs qui ne le
+  gèrent pas ; les effets au pointeur ne sont activés que sur souris/trackpad.
 - **Sans JavaScript**, le contenu reste entièrement visible (les animations d'apparition ne
   sont activées que si JS est présent).
 - **Feuille d'impression** : la page s'imprime (ou s'exporte en PDF) en version claire et
