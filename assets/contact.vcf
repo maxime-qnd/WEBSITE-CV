@@ -2,6 +2,7 @@ BEGIN:VCARD
 VERSION:3.0
 N:Quoineaud;Maxime;;;
 FN:Maxime Quoineaud
+ORG:QN Design
 TITLE:Light Designer / Light Operator / A/V Network Admin
 ROLE:Spectacle vivant - lumiere et reseaux audiovisuels
 EMAIL;TYPE=INTERNET,PREF:maxime.quoineaud@gmail.com
