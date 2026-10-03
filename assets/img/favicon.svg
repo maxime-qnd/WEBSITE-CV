@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MQ">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="qndesign">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#6366f1"/>
-      <stop offset="1" stop-color="#8b5cf6"/>
-    </linearGradient>
+    <radialGradient id="spot" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb489"/>
+      <stop offset="1" stop-color="#ff5a1f"/>
+    </radialGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="url(#g)"/>
-  <text x="32" y="42" text-anchor="middle"
-        font-family="'Space Grotesk', 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="26" font-weight="700" fill="#ffffff">MQ</text>
+  <rect width="64" height="64" rx="16" fill="#111113"/>
+  <circle cx="32" cy="32" r="13" fill="url(#spot)"/>
 </svg>

@@ -1,7 +1,7 @@
-# Carte de visite — Light Designer · Light Operator · A/V Network Admin
+# qndesign — landing page
 
-Site « carte de visite » d'une seule page : les activités et les contacts, rien d'autre
-(pas de portfolio, pas de blog). Statique, sans dépendance ni étape de build — trois
+Landing page d'une seule page pour **qndesign** : conception lumière, régie et réseaux
+audiovisuels pour le spectacle vivant. Style clair et épuré, mode sombre automatique. Statique, sans dépendance ni étape de build — trois
 fichiers suffisent à le mettre en ligne.
 
 ## Aperçu local
@@ -17,9 +17,9 @@ python3 -m http.server 8000
 
 ```
 index.html               page unique (contenu + données SEO/JSON-LD)
-assets/css/style.css     styles (thème sombre, faisceaux lumineux, responsive, impression)
-assets/js/main.js        apparitions au scroll, copie de l'e-mail, année du footer
-assets/img/favicon.svg   monogramme utilisé comme favicon
+assets/css/style.css     styles (clair/sombre auto, responsive, impression)
+assets/js/main.js        nav au scroll, apparitions, copie de l'e-mail, année du footer
+assets/img/favicon.svg   logo qndesign (carré + « spot ») utilisé comme favicon
 assets/contact.vcf       carte de visite numérique téléchargeable (vCard 3.0)
 ```
 
@@ -29,7 +29,6 @@ Les emplacements à remplir sont balisés par un commentaire `TODO` dans `index.
 
 | Élément | Où |
 |---|---|
-| Nom et initiales du monogramme | `index.html` (`.logo-mark`, `.hero__name`, `<title>`, JSON-LD), `assets/img/favicon.svg`, `assets/contact.vcf` |
 | Téléphone | bloc contact + `assets/contact.vcf` |
 | Ville de rattachement | bloc contact + `assets/contact.vcf` |
 | LinkedIn / Instagram | `.social-links` (supprimer les lignes inutiles) |
@@ -47,18 +46,19 @@ Toutes les couleurs sont des variables CSS en haut de `assets/css/style.css` :
 
 ```css
 :root {
-  --bg:      #08080d;   /* fond */
-  --accent:  #6366f1;   /* couleur principale */
-  --accent-2:#8b5cf6;   /* dégradés */
+  --bg:     #f7f7f4;   /* fond clair */
+  --ink:    #111113;   /* texte */
+  --accent: #ff5a1f;   /* couleur de signature (le « spot ») */
 }
 ```
 
-Changer `--accent` et `--accent-2` suffit à basculer l'ambiance (ambre, cyan, magenta…) :
-faisceaux, halos, boutons et survols suivent automatiquement.
+Les valeurs du mode sombre sont redéfinies juste en dessous (`prefers-color-scheme: dark`).
+Changer `--accent` suffit à changer la signature : puces, kickers, survols et halo du
+bloc contact suivent.
 
 ## Choix techniques
 
-- **Aucune dépendance externe** hors Google Fonts (Inter + Space Grotesk) : les icônes sont
+- **Aucune dépendance externe** hors Google Fonts (Inter, Inter Tight, JetBrains Mono) : les icônes sont
   des SVG inline, donc pas de CDN d'icônes à charger ni à surveiller.
 - **Accessibilité** : lien d'évitement, contrastes élevés, styles de focus visibles,
   libellés ARIA sur les liens sociaux, respect de `prefers-reduced-motion`.
@@ -67,7 +67,7 @@ faisceaux, halos, boutons et survols suivent automatiquement.
 - **Feuille d'impression** : la page s'imprime (ou s'exporte en PDF) en version claire et
   lisible, décor et boutons retirés.
 - **SEO** : `<meta description>`, Open Graph, Twitter Card et données structurées
-  schema.org `Person`.
+  schema.org `ProfessionalService`.
 
 ## Mise en ligne
 
