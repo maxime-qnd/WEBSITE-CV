@@ -78,50 +78,96 @@
 <main id="contenu">
 
   <!-- ========== HERO ========== -->
-  <section class="hero" id="top">
+  <section class="hero" id="top" data-hero>
+    <!-- Décor : halos colorés en dérive lente, derrière le verre -->
+    <div class="hero__bg" aria-hidden="true">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <span class="blob blob--3"></span>
+      <span class="hero__grain"></span>
+    </div>
+
     <div class="container hero__grid">
-      <div class="hero__copy" data-reveal>
-        <p class="eyebrow">
+      <div class="hero__copy">
+        <p class="eyebrow glass intro" style="--d: 0">
           <span class="status-dot" aria-hidden="true"></span>
           Disponible pour la saison 2026–2027
         </p>
 
         <h1 class="hero__title">
-          La lumière juste,<br>
-          <span class="muted">et le réseau qui la porte.</span>
+          <span class="line"><span class="intro" style="--d: 1">La lumière juste,</span></span>
+          <span class="line"><span class="intro muted" style="--d: 2">et le réseau</span></span>
+          <span class="line"><span class="intro muted" style="--d: 3">qui la porte.</span></span>
         </h1>
 
-        <p class="hero__lead">
+        <p class="hero__lead intro" style="--d: 4">
           qndesign conçoit, programme et exploite la lumière du spectacle vivant —
           et déploie l'infrastructure audiovisuelle qui la fait tourner, du plateau à la régie.
         </p>
 
-        <div class="hero__actions">
+        <div class="hero__actions intro" style="--d: 5">
           <a class="btn btn--dark" href="#contact">
             Parlons de votre projet
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
           </a>
-          <a class="btn btn--ghost" href="#services">Voir les services</a>
+          <a class="btn btn--glass" href="#services">Voir les services</a>
         </div>
       </div>
 
-      <!-- Visuel : un « spot » qui tombe sur un plateau, avec trois états de régie -->
-      <div class="hero__visual" aria-hidden="true" data-reveal>
-        <div class="stage">
-          <div class="stage__cone"></div>
-          <div class="stage__pool"></div>
-          <div class="stage__grid"></div>
+      <!-- Visuel : une régie en verre dépoli, en légère profondeur -->
+      <div class="hero__visual intro" style="--d: 3" aria-hidden="true">
+        <div class="scene" data-tilt>
 
-          <div class="chip chip--a"><span class="chip__led"></span>Cue 12.0 — GO</div>
-          <div class="chip chip--b"><span class="chip__led chip__led--blue"></span>sACN · univers 4</div>
-          <div class="chip chip--c"><span class="chip__led chip__led--green"></span>Dante · 48 kHz · locked</div>
+          <div class="glass console layer" style="--z: 0">
+            <div class="console__head">
+              <span class="dots"><i></i><i></i><i></i></span>
+              <span class="console__title">Show · Tournée 2026</span>
+              <span class="badge">LIVE</span>
+            </div>
+
+            <ul class="cues">
+              <li class="cue cue--done"><span class="cue__n">11</span><span class="cue__name">Intro — ambiance</span><span class="cue__t">0.0s</span></li>
+              <li class="cue cue--active">
+                <span class="cue__n">12</span><span class="cue__name">Refrain — full stage</span><span class="cue__t">3.0s</span>
+                <span class="cue__bar"><span></span></span>
+              </li>
+              <li class="cue"><span class="cue__n">13</span><span class="cue__name">Break — contre bleu</span><span class="cue__t">1.5s</span></li>
+              <li class="cue"><span class="cue__n">14</span><span class="cue__name">Outro — blackout</span><span class="cue__t">5.0s</span></li>
+            </ul>
+
+            <div class="faders">
+              <span style="--h: .82; --fd: 0s"></span>
+              <span style="--h: .55; --fd: -1.2s"></span>
+              <span style="--h: .95; --fd: -2.1s"></span>
+              <span style="--h: .40; --fd: -3.4s"></span>
+              <span style="--h: .70; --fd: -.6s"></span>
+              <span style="--h: .62; --fd: -2.8s"></span>
+              <span style="--h: .88; --fd: -1.7s"></span>
+              <span style="--h: .48; --fd: -4.1s"></span>
+            </div>
+          </div>
+
+          <div class="glass network layer float float--a" style="--z: 1">
+            <p class="network__title">Réseau</p>
+            <ul>
+              <li><span class="led led--orange"></span>sACN<b>U1–U8</b></li>
+              <li><span class="led led--green"></span>Dante<b>48 kHz</b></li>
+              <li><span class="led led--blue"></span>NDI<b>2 src</b></li>
+            </ul>
+          </div>
+
+          <div class="glass timecode layer float float--b" style="--z: 2">
+            <span class="timecode__label">TC</span>
+            <span class="timecode__value" data-timecode>01:12:08:14</span>
+          </div>
+
         </div>
       </div>
     </div>
 
     <!-- Domaines d'intervention -->
     <div class="container">
-      <ul class="domains" data-reveal>
+      <ul class="domains intro" style="--d: 6">
         <li>Concerts &amp; tournées</li>
         <li>Théâtre &amp; danse</li>
         <li>Festivals</li>
