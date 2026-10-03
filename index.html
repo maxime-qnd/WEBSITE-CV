@@ -6,20 +6,22 @@
 
 <!-- ============================================================
      À PERSONNALISER — recherche les balises « TODO » dans ce fichier
-     (nom, téléphone, ville, réseaux sociaux, SIRET, URL du site)
+     (téléphone, ville, réseaux sociaux, SIRET, URL du site)
      ============================================================ -->
 
-<title>Maxime Quoineaud — Light Designer · Light Operator · A/V Network Admin</title>
-<meta name="description" content="Light designer, light operator et administrateur réseaux audiovisuels pour le spectacle vivant : concerts, tournées, théâtre, festivals et événementiel. Conception lumière, régie, Art-Net, sACN, Dante, NDI.">
+<title>qndesign — Conception lumière, régie &amp; réseaux A/V</title>
+<meta name="description" content="qndesign, studio de conception lumière, de régie et de réseaux audiovisuels pour le spectacle vivant : concerts, tournées, théâtre, festivals et événementiel. Art-Net, sACN, Dante, NDI.">
 <meta name="author" content="Maxime Quoineaud">
-<meta name="theme-color" content="#0a0a0f">
+<meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0e10" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://example.com/"><!-- TODO : URL définitive du site -->
 
 <!-- Open Graph / réseaux sociaux -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Maxime Quoineaud — Light Designer · Light Operator · A/V Network Admin">
-<meta property="og:description" content="Conception lumière, régie et réseaux audiovisuels pour le spectacle vivant.">
+<meta property="og:site_name" content="qndesign">
+<meta property="og:title" content="qndesign — Conception lumière, régie &amp; réseaux A/V">
+<meta property="og:description" content="La lumière juste, et le réseau qui la porte. Conception, régie et infrastructure A/V pour le spectacle vivant.">
 <meta property="og:url" content="https://example.com/"><!-- TODO -->
 <meta property="og:image" content="https://example.com/assets/img/og-image.png"><!-- TODO : image 1200×630 -->
 <meta name="twitter:card" content="summary_large_image">
@@ -29,7 +31,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css">
 <script>document.documentElement.classList.add('js');</script>
@@ -37,12 +39,14 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Maxime Quoineaud",
-  "jobTitle": ["Light Designer", "Light Operator", "A/V Network Administrator"],
-  "email": "mailto:maxime.quoineaud@gmail.com",
+  "@type": "ProfessionalService",
+  "name": "qndesign",
   "url": "https://example.com/",
+  "email": "mailto:maxime.quoineaud@gmail.com",
+  "founder": { "@type": "Person", "name": "Maxime Quoineaud" },
+  "description": "Conception lumière, régie et réseaux audiovisuels pour le spectacle vivant.",
   "knowsAbout": ["Conception lumière", "Régie lumière", "Art-Net", "sACN", "Dante", "NDI", "Réseaux audiovisuels", "Spectacle vivant"],
+  "areaServed": ["FR", "Europe"],
   "address": { "@type": "PostalAddress", "addressCountry": "FR" }
 }
 </script>
@@ -51,196 +55,249 @@
 
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<!-- Décor : halos lumineux, faisceaux et trame -->
-<div class="stage-bg" aria-hidden="true">
-  <div class="beam beam--1"></div>
-  <div class="beam beam--2"></div>
-  <div class="beam beam--3"></div>
-  <div class="glow glow--1"></div>
-  <div class="glow glow--2"></div>
-  <div class="grid-overlay"></div>
-  <div class="vignette"></div>
-</div>
+<!-- ========== NAVIGATION ========== -->
+<header class="nav" data-nav>
+  <div class="container nav__inner">
+    <a class="brand" href="#top" aria-label="qndesign — retour en haut">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">qn<span>design</span></span>
+    </a>
 
-<main id="contenu" class="container">
+    <nav aria-label="Navigation principale">
+      <ul class="nav__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#approche">Approche</a></li>
+        <li><a href="#outils">Outils</a></li>
+      </ul>
+    </nav>
 
-  <!-- ========== EN-TÊTE ========== -->
-  <header class="hero" data-reveal>
-    <span class="logo-mark" aria-hidden="true">MQ</span><!-- TODO : initiales -->
+    <a class="btn btn--sm btn--dark" href="#contact">Démarrer un projet</a>
+  </div>
+</header>
 
-    <h1 class="hero__name">Maxime Quoineaud</h1><!-- TODO : nom -->
+<main id="contenu">
 
-    <p class="hero__roles">
-      <span>Light&nbsp;Designer</span>
-      <span class="sep" aria-hidden="true"></span>
-      <span>Light&nbsp;Operator</span>
-      <span class="sep" aria-hidden="true"></span>
-      <span>A/V&nbsp;Network&nbsp;Admin</span>
-    </p>
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="top">
+    <div class="container hero__grid">
+      <div class="hero__copy" data-reveal>
+        <p class="eyebrow">
+          <span class="status-dot" aria-hidden="true"></span>
+          Disponible pour la saison 2026–2027
+        </p>
 
-    <p class="hero__tagline">
-      Technicien et concepteur du spectacle vivant. Je conçois, programme et exploite
-      la lumière — et j'installe les réseaux audiovisuels qui la font tourner, du plateau au régisseur.
-    </p>
+        <h1 class="hero__title">
+          La lumière juste,<br>
+          <span class="muted">et le réseau qui la porte.</span>
+        </h1>
 
-    <p class="status">
-      <span class="status__dot" aria-hidden="true"></span>
-      Disponible pour vos projets
-    </p>
+        <p class="hero__lead">
+          qndesign conçoit, programme et exploite la lumière du spectacle vivant —
+          et déploie l'infrastructure audiovisuelle qui la fait tourner, du plateau à la régie.
+        </p>
 
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="mailto:maxime.quoineaud@gmail.com">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>
-        Me contacter
-      </a>
-      <a class="btn btn--ghost" href="assets/contact.vcf" download>
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M4 19h16"/></svg>
-        Enregistrer ma carte
-      </a>
+        <div class="hero__actions">
+          <a class="btn btn--dark" href="#contact">
+            Parlons de votre projet
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#services">Voir les services</a>
+        </div>
+      </div>
+
+      <!-- Visuel : un « spot » qui tombe sur un plateau, avec trois états de régie -->
+      <div class="hero__visual" aria-hidden="true" data-reveal>
+        <div class="stage">
+          <div class="stage__cone"></div>
+          <div class="stage__pool"></div>
+          <div class="stage__grid"></div>
+
+          <div class="chip chip--a"><span class="chip__led"></span>Cue 12.0 — GO</div>
+          <div class="chip chip--b"><span class="chip__led chip__led--blue"></span>sACN · univers 4</div>
+          <div class="chip chip--c"><span class="chip__led chip__led--green"></span>Dante · 48 kHz · locked</div>
+        </div>
+      </div>
     </div>
-  </header>
 
-  <div class="separator" aria-hidden="true"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
-
-  <!-- ========== ACTIVITÉS ========== -->
-  <section class="section" aria-labelledby="titre-activites" data-reveal>
-    <h2 class="section-label" id="titre-activites">Activités</h2>
-
-    <div class="roles-grid">
-
-      <article class="card role-card">
-        <span class="role-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5.9 1.2.9 1.9v.3h5.4v-.3c0-.7.3-1.4.9-1.9A6 6 0 0 0 12 3Z"/></svg>
-        </span>
-        <h3 class="role-title">Light Designer</h3>
-        <p class="role-description">
-          Conception lumière sur mesure : lecture du projet artistique, choix du parc,
-          plans de feu, patch et prévisualisation. Une écriture au service du plateau,
-          pensée pour tenir en tournée comme en série.
-        </p>
-        <ul class="role-tags">
-          <li>Plan de feu</li><li>Prévisualisation</li><li>Fiche technique</li><li>Conduite</li>
-        </ul>
-      </article>
-
-      <article class="card role-card">
-        <span class="role-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M6 20V14"/><path d="M6 10V4"/><circle cx="6" cy="12" r="2"/><path d="M12 20v-4"/><path d="M12 12V4"/><circle cx="12" cy="14" r="2"/><path d="M18 20v-9"/><path d="M18 7V4"/><circle cx="18" cy="9" r="2"/></svg>
-        </span>
-        <h3 class="role-title">Light Operator</h3>
-        <p class="role-description">
-          Régie et conduite en exploitation : programmation console, encodage timecode,
-          gestion des cues et des imprévus. Du one-shot au show calé à l'image, avec
-          la même exigence de fiabilité.
-        </p>
-        <ul class="role-tags">
-          <li>Programmation</li><li>Timecode</li><li>Régie de tournée</li><li>Backup show</li>
-        </ul>
-      </article>
-
-      <article class="card role-card">
-        <span class="role-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="2.5" y="16" width="6" height="5" rx="1"/><rect x="15.5" y="16" width="6" height="5" rx="1"/><path d="M12 8v4"/><path d="M5.5 16v-2.5h13V16"/></svg>
-        </span>
-        <h3 class="role-title">A/V Network Admin</h3>
-        <p class="role-description">
-          Architecture et administration des réseaux audiovisuels : segmentation VLAN,
-          transport Art-Net / sACN, audio Dante, vidéo NDI, synchro PTP. Déploiement,
-          documentation et diagnostic sur site.
-        </p>
-        <ul class="role-tags">
-          <li>Art-Net / sACN</li><li>Dante</li><li>NDI</li><li>VLAN &amp; PTP</li>
-        </ul>
-      </article>
-
+    <!-- Domaines d'intervention -->
+    <div class="container">
+      <ul class="domains" data-reveal>
+        <li>Concerts &amp; tournées</li>
+        <li>Théâtre &amp; danse</li>
+        <li>Festivals</li>
+        <li>Événementiel</li>
+        <li>Installations immersives</li>
+        <li>Corporate</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ========== SAVOIR-FAIRE ========== -->
-  <section class="section" aria-labelledby="titre-savoirfaire" data-reveal>
-    <h2 class="section-label" id="titre-savoirfaire">Savoir-faire</h2>
+  <!-- ========== SERVICES ========== -->
+  <section class="section" id="services" aria-labelledby="titre-services">
+    <div class="container">
+      <header class="section__head" data-reveal>
+        <p class="kicker">Services</p>
+        <h2 class="section__title" id="titre-services">Trois métiers, une seule exigence&nbsp;: que le show tienne.</h2>
+      </header>
 
-    <div class="skills-grid">
-      <div class="card skill-block">
-        <h3 class="skill-title">Consoles &amp; pupitres</h3>
-        <ul class="tag-list">
-          <li class="tag">grandMA2 / MA3</li><li class="tag">Chamsys MagicQ</li>
-          <li class="tag">Avolites</li><li class="tag">ETC Eos</li><li class="tag">Onyx</li>
-        </ul>
-      </div>
+      <div class="services">
+        <article class="service" data-reveal>
+          <span class="service__num">01</span>
+          <h3 class="service__title">Conception lumière</h3>
+          <p>
+            Lecture du projet artistique, choix du parc, plans de feu, patch et
+            prévisualisation. Une écriture au service du plateau, pensée pour tenir
+            en tournée comme en série.
+          </p>
+          <ul class="pills">
+            <li>Plan de feu</li><li>Prévisualisation</li><li>Fiche technique</li><li>Conduite</li>
+          </ul>
+        </article>
 
-      <div class="card skill-block">
-        <h3 class="skill-title">Réseaux &amp; protocoles</h3>
-        <ul class="tag-list">
-          <li class="tag">Art-Net</li><li class="tag">sACN</li><li class="tag">DMX / RDM</li>
-          <li class="tag">Dante</li><li class="tag">NDI</li><li class="tag">PTP</li>
-          <li class="tag">VLAN / switching</li>
-        </ul>
-      </div>
+        <article class="service" data-reveal>
+          <span class="service__num">02</span>
+          <h3 class="service__title">Régie &amp; programmation</h3>
+          <p>
+            Programmation console, encodage timecode, gestion des cues et des imprévus.
+            Du one-shot au show calé à l'image, avec la même exigence de fiabilité.
+          </p>
+          <ul class="pills">
+            <li>Programmation</li><li>Timecode</li><li>Régie de tournée</li><li>Backup show</li>
+          </ul>
+        </article>
 
-      <div class="card skill-block">
-        <h3 class="skill-title">Conception &amp; prévisu</h3>
-        <ul class="tag-list">
-          <li class="tag">Capture</li><li class="tag">WYSIWYG</li><li class="tag">Depence</li>
-          <li class="tag">Vectorworks</li><li class="tag">AutoCAD</li>
-        </ul>
+        <article class="service" data-reveal>
+          <span class="service__num">03</span>
+          <h3 class="service__title">Réseaux audiovisuels</h3>
+          <p>
+            Architecture et administration&nbsp;: segmentation VLAN, transport Art-Net / sACN,
+            audio Dante, vidéo NDI, synchro PTP. Déploiement, documentation et
+            diagnostic sur site.
+          </p>
+          <ul class="pills">
+            <li>Art-Net / sACN</li><li>Dante</li><li>NDI</li><li>VLAN &amp; PTP</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ========== DOMAINES ========== -->
-  <section class="section" aria-labelledby="titre-domaines" data-reveal>
-    <h2 class="section-label" id="titre-domaines">Domaines d'intervention</h2>
-    <ul class="tag-list tag-list--center">
-      <li class="tag tag--dot">Concerts &amp; tournées</li>
-      <li class="tag tag--dot">Théâtre &amp; danse</li>
-      <li class="tag tag--dot">Festivals</li>
-      <li class="tag tag--dot">Événementiel</li>
-      <li class="tag tag--dot">Installations immersives</li>
-      <li class="tag tag--dot">Corporate</li>
-    </ul>
+  <!-- ========== APPROCHE ========== -->
+  <section class="section section--alt" id="approche" aria-labelledby="titre-approche">
+    <div class="container">
+      <header class="section__head" data-reveal>
+        <p class="kicker">Approche</p>
+        <h2 class="section__title" id="titre-approche">De la première intention au dernier GO.</h2>
+      </header>
+
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step__index">Étape 1</span>
+          <h3>Écoute</h3>
+          <p>Comprendre le propos, le lieu, les contraintes techniques et budgétaires.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__index">Étape 2</span>
+          <h3>Conception</h3>
+          <p>Plan de feu, synoptique réseau et prévisualisation pour valider avant le montage.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__index">Étape 3</span>
+          <h3>Mise en œuvre</h3>
+          <p>Patch, programmation, déploiement réseau et tests — tout est documenté.</p>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__index">Étape 4</span>
+          <h3>Exploitation</h3>
+          <p>Régie en représentation, backup prêt, transmission claire aux équipes d'accueil.</p>
+        </li>
+      </ol>
+    </div>
   </section>
 
-  <div class="separator" aria-hidden="true"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+  <!-- ========== OUTILS ========== -->
+  <section class="section" id="outils" aria-labelledby="titre-outils">
+    <div class="container">
+      <header class="section__head" data-reveal>
+        <p class="kicker">Outils</p>
+        <h2 class="section__title" id="titre-outils">Les standards du métier, maîtrisés.</h2>
+      </header>
+
+      <div class="tools" data-reveal>
+        <div class="tools__row">
+          <h3>Consoles</h3>
+          <ul class="pills pills--plain">
+            <li>grandMA2 / MA3</li><li>Chamsys MagicQ</li><li>Avolites</li><li>ETC Eos</li><li>Onyx</li>
+          </ul>
+        </div>
+        <div class="tools__row">
+          <h3>Réseaux &amp; protocoles</h3>
+          <ul class="pills pills--plain">
+            <li>Art-Net</li><li>sACN</li><li>DMX / RDM</li><li>Dante</li><li>NDI</li><li>PTP</li><li>VLAN / switching</li>
+          </ul>
+        </div>
+        <div class="tools__row">
+          <h3>Conception &amp; prévisu</h3>
+          <ul class="pills pills--plain">
+            <li>Capture</li><li>WYSIWYG</li><li>Depence</li><li>Vectorworks</li><li>AutoCAD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ========== CONTACT ========== -->
-  <section class="section section--contact" aria-labelledby="titre-contact" data-reveal>
-    <div class="card contact-card">
-      <h2 class="contact-title" id="titre-contact">Travaillons ensemble</h2>
-      <p class="contact-subtitle">Une création, une tournée, un renfort réseau&nbsp;? Parlons-en.</p>
+  <section class="section section--cta" id="contact" aria-labelledby="titre-contact">
+    <div class="container">
+      <div class="cta" data-reveal>
+        <div class="cta__copy">
+          <p class="kicker kicker--light">Contact</p>
+          <h2 class="cta__title" id="titre-contact">Une création, une tournée, un renfort réseau&nbsp;?</h2>
+          <p class="cta__lead">Racontez-moi votre projet — réponse sous 48&nbsp;h.</p>
 
-      <div class="contact-links">
-        <div class="contact-row">
-          <a class="contact-link" href="mailto:maxime.quoineaud@gmail.com">
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg>
-            <span>maxime.quoineaud@gmail.com</span>
-          </a>
-          <button class="copy-btn" type="button" data-copy="maxime.quoineaud@gmail.com"
-                  aria-label="Copier l'adresse e-mail" title="Copier l'adresse e-mail">
-            <svg class="ico ico--copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
-            <svg class="ico ico--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
-          </button>
+          <div class="cta__actions">
+            <a class="btn btn--light" href="mailto:maxime.quoineaud@gmail.com">
+              Écrire un e-mail
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--outline-light" href="assets/contact.vcf" download>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M4 19h16"/></svg>
+              Enregistrer le contact
+            </a>
+          </div>
         </div>
-        <!-- TODO : téléphone réel (le lien tel: doit rester au format international) -->
-        <a class="contact-link" href="tel:+33600000000">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3.5l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L15 13l4 1.5V18a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4 7.2 2 2 0 0 1 6 5V4Z"/></svg>
-          <span>+33 (0)6 00 00 00 00</span>
-        </a>
-        <!-- TODO : ville de rattachement -->
-        <p class="contact-link contact-link--static">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-5.7 6.5-10.5a6.5 6.5 0 0 0-13 0C5.5 15.3 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.5"/></svg>
-          <span>Votre ville, France — mobile toute France &amp; Europe</span>
-        </p>
-      </div>
 
-      <!-- TODO : remplacer les # par les URL réelles, ou supprimer les lignes inutiles -->
-      <div class="social-links">
-        <a class="social-link" href="#" aria-label="LinkedIn" rel="me noopener" target="_blank">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17"/><path d="M7.5 7.5v.01"/><path d="M11.5 17v-3.5a2 2 0 0 1 4 0V17"/><path d="M11.5 17v-6.5"/></svg>
-        </a>
-        <a class="social-link" href="#" aria-label="Instagram" rel="me noopener" target="_blank">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg>
-        </a>
+        <ul class="cta__details">
+          <li>
+            <span class="cta__label">E-mail</span>
+            <span class="cta__value">
+              <a href="mailto:maxime.quoineaud@gmail.com">maxime.quoineaud@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="maxime.quoineaud@gmail.com"
+                      aria-label="Copier l'adresse e-mail" title="Copier l'adresse e-mail">
+                <svg class="ico ico--copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+                <svg class="ico ico--check" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+              </button>
+            </span>
+          </li>
+          <li>
+            <span class="cta__label">Téléphone</span>
+            <!-- TODO : téléphone réel (le lien tel: doit rester au format international) -->
+            <span class="cta__value"><a href="tel:+33600000000">+33 (0)6 00 00 00 00</a></span>
+          </li>
+          <li>
+            <span class="cta__label">Basé à</span>
+            <!-- TODO : ville de rattachement -->
+            <span class="cta__value">Votre ville, France — mobile France &amp; Europe</span>
+          </li>
+          <li>
+            <span class="cta__label">Réseaux</span>
+            <!-- TODO : remplacer les # par les URL réelles, ou supprimer les liens inutiles -->
+            <span class="cta__value cta__social">
+              <a href="#" rel="me noopener" target="_blank">LinkedIn</a>
+              <a href="#" rel="me noopener" target="_blank">Instagram</a>
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -249,7 +306,11 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <p>© <span data-year>2026</span> Maxime Quoineaud — Tous droits réservés</p>
+    <a class="brand brand--small" href="#top" aria-label="qndesign — retour en haut">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">qn<span>design</span></span>
+    </a>
+    <p>© <span data-year>2026</span> qndesign — Maxime Quoineaud</p>
     <p class="footer__legal">SIRET&nbsp;: 000&nbsp;000&nbsp;000&nbsp;00000<!-- TODO --></p>
   </div>
 </footer>

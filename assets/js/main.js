@@ -1,4 +1,4 @@
-/* Carte de visite — interactions légères, sans dépendance */
+/* qndesign — interactions légères, sans dépendance */
 (function () {
   'use strict';
 
@@ -8,6 +8,16 @@
   var yearEl = document.querySelector('[data-year]');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
+  }
+
+  /* Bordure de la navigation une fois la page défilée */
+  var nav = document.querySelector('[data-nav]');
+  if (nav) {
+    var onScroll = function () {
+      nav.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
   /* Apparition progressive des sections au scroll */
